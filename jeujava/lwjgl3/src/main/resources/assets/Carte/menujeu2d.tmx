@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="35" height="35" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="1">
+ <imagelayer id="2" name="fond pour menu" locked="1">
+  <image source="../../../OneDrive/Bureau/mon jeux en 2d qui raconte l'attaque d'une ecole par une petit robot codeur j'ai besoin d'un fond pour mon menu  d'acceuil avec deux boutons l'un ecrit play! et l'autre credits les heros sont deux éléve de l'ec (1).jpg" width="1120" height="1120"/>
+ </imagelayer>
+</map>

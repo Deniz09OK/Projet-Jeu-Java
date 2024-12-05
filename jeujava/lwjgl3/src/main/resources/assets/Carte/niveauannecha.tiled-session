@@ -1,0 +1,294 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "menujeu2d.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "Tous les Fichiers (*)",
+    "fileStates": {
+        "1.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "13.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "14.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "15.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "2.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "3.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "5.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "ACIDNIV1.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Acid (1).tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Attackchien.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/Acid (1).tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/CelestialObjects.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/Niveau1deniz.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 550.6666666666665,
+                "y": 388.66666666666663
+            }
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/deco.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/fond ecran.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/plateformes.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/AppData/Local/Temp/84b49e0e-7416-41c4-951e-d898d8049e91_Carte.zip.e91/Carte/tuiles 2.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/deniz/Acid (1).tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/deniz/Niveau1deniz.tmx": {
+            "scale": 0.22344791666666663,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1606.6383851568694,
+                "y": 82.79334296769383
+            }
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Spike.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Tile (1).tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Tile (12).tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Tile (13).tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Tile (14).tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Tile (2).tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/OneDrive/Bureau/epitech_piscine/Tile (3).tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveai morganne/niveaumorgane.tmx": {
+            "expandedGroupLayers": [
+                8
+            ],
+            "expandedObjectLayers": [
+                7
+            ],
+            "scale": 0.25,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": -84,
+                "y": 456
+            }
+        },
+        "C:/Users/annec/Projets Epitech/niveai morganne/niveaumorgane1..tmx": {
+            "scale": 0.18485416666666665,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -170.404598219317,
+                "y": 1090.048461625155
+            }
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/1.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/13.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/14.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/15.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/2.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/3.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/5.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/CelestialObjects.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/layer01_ground.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/layer04_Path.tsx": {
+            "scaleInDock": 1
+        },
+        "CelestialObjects.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Design_sans_titre-removebg-preview.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "Niveau1deniz.tmx": {
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 0.75,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 796.6666666666665,
+                "y": 604.6666666666666
+            }
+        },
+        "Office_Design_1.tsx": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        },
+        "Tree_3.tsx": {
+            "scaleInDock": 0.12,
+            "scaleInEditor": 1
+        },
+        "af750c44df339f5ed0fe4ff0be53644c.tsx": {
+            "scaleInDock": 0.12,
+            "scaleInEditor": 1
+        },
+        "arbres.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "fond ecran.tsx": {
+            "scaleInDock": 1
+        },
+        "layer01_ground.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "layer04_Path.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "menujeu2d.tmx": {
+            "scale": 0.46238281249999996,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 326.56923206893646,
+                "y": 610.965616287911
+            }
+        },
+        "mon jeux en 2d qui raconte l'attaque d'une ecole par une petit robot codeur j'ai besoin d'un fond pour mon menu  d'acceuil avec deux boutons l'un ecrit play! et l'autre credits les heros sont deux éléve de l'ec (1).tsx": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        },
+        "niveaufinal.tmx": {
+            "expandedGroupLayers": [
+                12
+            ],
+            "expandedObjectLayers": [
+                12,
+                16,
+                14,
+                13
+            ],
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1608,
+                "y": 360
+            }
+        },
+        "niveaumorgane.tmx": {
+            "expandedGroupLayers": [
+                8
+            ],
+            "expandedObjectLayers": [
+                7
+            ],
+            "scale": 0.25,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 2556,
+                "y": 456
+            }
+        },
+        "tilsetniveauannecha.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/annec/Projets Epitech/niveai morganne",
+    "last.externalTilesetPath": "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte",
+    "last.imagePath": "C:/Users/annec/Projets Epitech/niveau/Carte/assets deco/platformer_background_1/Layers",
+    "map.height": 40,
+    "map.lastUsedExportFilter": "Fichiers de carte Tiled (*.tmx *.xml)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 40,
+    "openFiles": [
+        "menujeu2d.tmx"
+    ],
+    "project": "niveauannecha.tiled-project",
+    "recentFiles": [
+        "C:/Users/annec/Projets Epitech/niveai morganne/niveaumorgane1..tmx",
+        "menujeu2d.tmx",
+        "C:/Users/annec/Projets Epitech/niveai morganne/niveaumorgane.tmx",
+        "C:/Users/annec/OneDrive/Bureau/deniz/Niveau1deniz.tmx",
+        "1.tsx",
+        "CelestialObjects.tsx",
+        "C:/Users/annec/OneDrive/Bureau/deniz/Acid (1).tsx",
+        "C:/Users/annec/Projets Epitech/niveau/32rogues/Carte/CelestialObjects.tsx",
+        "Niveau1deniz.tmx",
+        "Acid (1).tsx",
+        "ACIDNIV1.tsx",
+        "Office_Design_1.tsx"
+    ],
+    "tileset.lastUsedFilter": "Fichiers de jeu de tuiles Tiled (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx"
+}

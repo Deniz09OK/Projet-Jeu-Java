@@ -1,0 +1,151 @@
+buildscript {
+  repositories {
+    gradlePluginPortal()
+    mavenCentral()
+    jcenter()
+    maven { url 'https://maven.badlogicgames.com' }
+  }
+  dependencies {
+    classpath "io.github.fourlastor:construo:1.4.3"
+    if (enableGraalNative == 'true') {
+      classpath "org.graalvm.buildtools.native:org.graalvm.buildtools.native.gradle.plugin:0.9.28"
+    }
+  }
+}
+
+plugins {
+  id "application"
+}
+
+application {
+    mainClass = 'jeu2d.Main2D.Main'
+}
+
+apply plugin: 'io.github.fourlastor.construo'
+
+def appName = 'Annecha la star'
+def gdxVersion = '1.13.0' // Assurez-vous que cette version est correcte
+
+sourceSets.main.resources.srcDirs += [ file('lwjgl3/assets').path ]
+sourceSets.main.resources.srcDirs += [ file('src/main/resources/assets').path ]
+sourceSets.main.resources.srcDirs += [ file('src/main/resources/assets').path ]
+sourceSets.main.resources.srcDirs += [ file('src/main/resources/assets').path ]
+mainClassName = 'jeu2d.Main2D.Main'
+application.setMainClass(mainClassName)
+eclipse.project.name = appName + '-lwjgl3'
+java.sourceCompatibility = 21
+java.targetCompatibility = 21
+
+if (JavaVersion.current().isJava9Compatible()) {
+  compileJava.options.release.set(21)
+}
+
+repositories {
+  mavenCentral()
+  jcenter()
+  maven { url 'https://maven.badlogicgames.com' }
+  maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+  implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+  implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+  implementation project(':core')
+
+  if(enableGraalNative == 'true') {
+    implementation "io.github.berstanio:gdx-svmhelper-backend-lwjgl3:$graalHelperVersion"
+    implementation "io.github.berstanio:gdx-svmhelper-extension-box2d:$graalHelperVersion"
+    implementation "io.github.berstanio:gdx-svmhelper-extension-freetype:$graalHelperVersion"
+  }
+}
+
+def os = System.properties['os.name'].toLowerCase()
+
+tasks.named('run') {
+  mainClass.set('jeu2d.Main2D.Main')
+  args = []
+}
+
+jar {
+  archiveFileName.set("${appName}-${projectVersion}.jar")
+  duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+  dependsOn configurations.runtimeClasspath
+  from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+  exclude('META-INF/INDEX.LIST', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA')
+  dependencies {
+    exclude('META-INF/INDEX.LIST', 'META-INF/maven/**')
+  }
+  manifest {
+    attributes 'Main-Class': project.mainClassName
+  }
+  doLast {
+    file(archiveFile).setExecutable(true, false)
+  }
+}
+
+construo {
+  name.set(appName)
+  humanName.set(appName)
+  version.set("$projectVersion")
+
+  targets {
+    create("linuxX64", io.github.fourlastor.construo.Target.Linux) {
+      architecture.set(io.github.fourlastor.construo.Target.Architecture.X86_64)
+      jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.12_7.tar.gz")
+    }
+    create("macM1", io.github.fourlastor.construo.Target.MacOs) {
+      architecture.set(io.github.fourlastor.construo.Target.Architecture.AARCH64)
+      jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.12_7.tar.gz")
+      identifier.set("jeu2d.java." + appName)
+      macIcon.set(project.file("icons/logo.icns"))
+    }
+    create("macX64", io.github.fourlastor.construo.Target.MacOs) {
+      architecture.set(io.github.fourlastor.construo.Target.Architecture.X86_64)
+      jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_mac_hotspot_17.0.12_7.tar.gz")
+      identifier.set("jeu2d.java." + appName)
+      macIcon.set(project.file("icons/logo.icns"))
+    }
+    create("winX64", io.github.fourlastor.construo.Target.Windows) {
+      architecture.set(io.github.fourlastor.construo.Target.Architecture.X86_64)
+      jdkUrl.set("https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.12_7.zip")
+    }
+  }
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources', 'src/main/resources/assets']
+        }
+    }
+}
+
+tasks.register('dist') {
+  dependsOn 'jar'
+}
+
+distributions {
+  main {
+    contents {
+      into('libs') {
+        project.configurations.runtimeClasspath.files.findAll { file ->
+          file.getName() != project.tasks.jar.outputs.files.singleFile.name
+        }.each { file ->
+          exclude file.name
+        }
+      }
+    }
+  }
+}
+
+startScripts.dependsOn(':lwjgl3:jar')
+startScripts.classpath = project.tasks.jar.outputs.files
+
+if(enableGraalNative == 'true') {
+  apply from: file("nativeimage.gradle")
+}

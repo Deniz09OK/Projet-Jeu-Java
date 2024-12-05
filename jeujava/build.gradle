@@ -1,0 +1,48 @@
+plugins {
+  id 'java'
+  id 'eclipse'
+  id 'idea'
+}
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+  maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+  maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+  maven { url 'https://maven.badlogicgames.com' }
+  google()
+  maven { url 'https://jitpack.io' }
+}
+
+ext {
+    gdxVersion = '1.13.0' // Assurez-vous que cette version est correcte
+}
+
+dependencies {
+  implementation "com.badlogicgames.gdx:gdx:1.13.0"
+  implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:1.13.0"
+  implementation "com.badlogicgames.gdx:gdx-box2d:1.13.0"
+  implementation "com.badlogicgames.gdx:gdx-freetype:1.13.0"
+  implementation "com.badlogicgames.gdx:gdx-platform:1.13.0:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-box2d-platform:1.13.0:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-freetype-platform:1.13.0:natives-desktop"
+  implementation "com.badlogicgames.gdx:gdx-tiled:1.13.0"
+  implementation "com.badlogicgames.gdx:gdx-tiled-platform:1.13.0:natives-desktop"
+}
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.register('generateAssetList') {
+  inputs.dir("${projectDir}/assets/")
+  File assetsFolder = new File("${projectDir}/assets/")
+  File assetsFile = new File(assetsFolder, "assets.txt")
+  assetsFile.delete()
+
+  fileTree(assetsFolder).collect { assetsFolder.relativePath(it) }.sort().each {
+    assetsFile.append(it + "\n")
+  }
+}
+processResources.dependsOn 'generateAssetList'
