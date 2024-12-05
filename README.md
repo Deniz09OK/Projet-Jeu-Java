@@ -10,8 +10,6 @@ Nous espérons que tu passeras un bon moment à jouer ! 🎉
 
 Fonctionnalités
 
-📋 Menu Principal : Un écran de menu principal avec des options pour jouer et consulter les crédits.
-
 🏃‍♂️ Mouvements du Personnage : Déplacement à gauche, à droite, saut et interaction avec l'environnement.
 
 📷 Caméra Dynamique : La caméra suit le personnage principal tout en restant dans les limites de la carte.
