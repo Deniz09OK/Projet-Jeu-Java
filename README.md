@@ -19,13 +19,9 @@ Fonctionnalités
 Installation
 
 Clonez le dépôt :
-sh
-Copier le code
-git clone https://github.com/votre-utilisateur/votre-repo.git  
+git clone https://github.com/Deniz09OK/Projet-Jeu-Java
 
 Pour démarrer le jeu, ouvrez votre terminal et exécutez les commandes suivantes :
-sh
-Copier le code
 gradle build  
 gradle run  
 
